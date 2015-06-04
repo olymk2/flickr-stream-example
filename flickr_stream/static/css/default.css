@@ -1,0 +1,21 @@
+.photo {
+    width:320px;
+    height:400px;
+    margin:10px;
+    padding:20px;
+    background-color:#0087A8;
+    float:left;
+    position:relative;
+}
+
+#flickr-search {left:0px;right:0px;height:65px;margin:10px;background-color:#0087A8;}
+.photo {overflow:hidden;}
+.photo-image{height:200px;overflow:hidden;}
+.photo-image img{left:10px;right:10px:top:10px;width:100%;}
+
+h1 {margin-left:20px;}
+form {margin:20px;position:absolute;}
+label {font-size:18px;}
+ul {margin:none;padding:none;display:inline;}
+li {list-style:none;float:left;}
+a {color:#000;}

@@ -1,0 +1,22 @@
+{% for photo in feed %}
+    <div class="photo">
+        <div class="photo-image"><img alt="{{photo.title_full}}" src="{{photo.image}}" /></div>
+        <div>
+            <span class="title">
+                <a target="_blank" title="view '{{photo.title_full}}' on flickr" href="{{photo.link}}">{{photo.title}}</a> 
+            </span> by 
+            <span class="author">
+                <a target="_blank" href="http://flickr.com/photos/{{photo.author}}">{{photo.author}}</a>
+            </span>
+            <p>Description: does this feed have description text ? The description entity seems to be html layout</p>
+            {% if photo.tags %}
+                <ul>
+                    <li><strong>Tags: </strong></li>
+                    {% for tag in photo.tags %}
+                        <li><a title="Search this tag on twitter" href="/?tags={{tag}}">{{tag}}</a>,</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    </div>
+{% endfor %}

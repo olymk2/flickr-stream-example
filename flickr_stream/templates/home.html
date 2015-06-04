@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block main_content %}
+
+<div id="flickr-search">
+    <form method="get" action="/">
+        <label for="tags">Search</label>
+        <input id="tags" name="tags" value="{{tags}}"/>
+    </form>
+</div>
+
+<div id="flickr-contain">
+    {% include "photo.html" with feed=feed %}
+</div>
+
+{% endblock main_content %}

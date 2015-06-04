@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Flickr photo stream{% if tags %} - {{tags}}{% endif %}</title>
+        <meta name="description" content="Flickr photo stream - Example Site" />
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/default.css">
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="https://raw.githubusercontent.com/fredwu/jquery-endless-scroll/master/js/jquery.endless-scroll.js" ></script>
+        <script type="text/javascript" src="/static/js/default.js" ></script>
+    </head>
+    <body class="{% block bodyclass %}{{ area }} {{cssarea}}{% endblock %}">
+        <header>
+            <div class="container">
+                <h1><a class="text-hide" href="{% url 'home' %}">Flickr photo stream</a></h1>
+            </div>
+        </header>
+
+        <main id="content" role="main">
+            <section class="main-content">
+                <div class="container main_content_wrap {% block main-content-class %}{% endblock %}">
+                    {% block main_content %}{% endblock main_content %}
+                </div>
+            </section>
+        </main>
+
+        <footer class="sitefooter">
+            <div class="container"></div>
+        </footer>
+    </body>
+</html>
